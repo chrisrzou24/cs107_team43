@@ -18,6 +18,8 @@ jobs:
         run: pip3 install pytest
       - name: Install Coverage dependencies
         run: pip3 install coverage
+      - name: Install numpy dependency
+        run: pip3 install numpy
       - name: Run expression test suite
         run: coverage run -m pytest Autodiff43/test/test_expression.py
       - name: post results to html
@@ -40,6 +42,8 @@ jobs:
         run: pip3 install pytest
       - name: Install Coverage dependencies
         run: pip3 install coverage
+      - name: Install numpy dependency
+        run: pip3 install numpy
       - name: Run expression test suite
         run: coverage run -m pytest Autodiff43/test/test_expression.py
       - name: print coverage results

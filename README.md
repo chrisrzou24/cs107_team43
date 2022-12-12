@@ -1,7 +1,7 @@
 # Team 43 Project Repository
 
-![test.yml](https://code.harvard.edu/CS107/team43/actions/workflows/test.yml/badge.svg)
-![coverage.yml](https://code.harvard.edu/CS107/team43/actions/workflows/coverage.yml/badge.svg)
+![test.yml](https://github.com/chrisrzou24/cs107_team43/actions/workflows/test.yml/badge.svg)
+![coverage.yml](https://github.com/chrisrzou24/cs107_team43/actions/workflows/coverage.yml/badge.svg)
 
 Authored by Christopher Zou, John Ho, Jun Chong, Jerry Yang, Sho Sho Ho.
 
