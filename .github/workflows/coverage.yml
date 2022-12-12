@@ -1,0 +1,48 @@
+name: Coverage
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  html:
+    name: post results to html
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+      - name: Install Python dependencies
+        run: pip3 install pytest
+      - name: Install Coverage dependencies
+        run: pip3 install coverage
+      - name: Run expression test suite
+        run: coverage run -m pytest Autodiff43/test/test_expression.py
+      - name: post results to html
+        run: coverage html --omit=Autodiff43/logic/base.py,Autodiff43/logic/core.py,Autodiff43/logic/utils.py -d Autodiff43/test/htmlcov
+      - name: remove gitignore
+        run: rm -f Autodiff43/test/htmlcov/.gitignore
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+            folder: Autodiff43/test/htmlcov
+  coverage:
+    name: Test Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+      - name: Install Python dependencies
+        run: pip3 install pytest
+      - name: Install Coverage dependencies
+        run: pip3 install coverage
+      - name: Run expression test suite
+        run: coverage run -m pytest Autodiff43/test/test_expression.py
+      - name: print coverage results
+        run: coverage report -m --omit=Autodiff43/logic/base.py,Autodiff43/logic/core.py,Autodiff43/logic/utils.py | awk ' END {print $(NF)}'> results.txt
+      - name: Test coverage
+        run: pytest Autodiff43/test/test_coverage.py

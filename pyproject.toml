@@ -1,0 +1,21 @@
+[project]
+name = "Autodiff43"
+version = "1.0.0"
+authors = [
+  { name="Christopher Zou", email="crzou@college.harvard.edu" },
+  { name="John Ho", email="johnho@college.harvard.edu" },
+  { name="Jun Chong", email="junchong@college.harvard.edu" },
+  { name="Jerry Yang", email="jerryyang@college.harvard.edu" },
+  { name="Sho Sho Ho", email="lho@college.harvard.edu" }
+]
+description = "Autodifferentiation package for Team 43 for CS107, Fall 2022"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://code.harvard.edu/CS107/team43"

@@ -1,0 +1,23 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  test_expression:
+    name: Test Expressions Class
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+      - name: Install Python dependencies
+        run: pip3 install pytest
+      - name: Install numpy dependency
+        run: pip3 install numpy
+      - name: Run expression test suite
+        run: pytest Autodiff43/test/test_expression.py
+      

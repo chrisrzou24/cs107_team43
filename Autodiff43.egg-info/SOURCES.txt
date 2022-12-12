@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+Autodiff43/__init__.py
+Autodiff43.egg-info/PKG-INFO
+Autodiff43.egg-info/SOURCES.txt
+Autodiff43.egg-info/dependency_links.txt
+Autodiff43.egg-info/top_level.txt
+Autodiff43/logic/__init__.py
+Autodiff43/logic/base.py
+Autodiff43/logic/core.py
+Autodiff43/logic/forward_mode.py
+Autodiff43/logic/reverse_mode.py
+Autodiff43/logic/utils.py
+Autodiff43/test/__init__.py
+Autodiff43/test/test_coverage.py
+Autodiff43/test/test_expression.py
